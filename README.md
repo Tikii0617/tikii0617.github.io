@@ -1,6 +1,5 @@
-# This is  My Portfolio Website
-
-## Overview
+# Personal Portfolio Website
+Visit my [Portfolio Website](https://tikii0617.github.io/) for more information about my work and projects.
 
 This portfolio website is designed to be responsive and user-friendly, highlighting my professional skills, work experience, and personal projects. It includes sections for About Me, Skills, Work, and Contact information.
 
