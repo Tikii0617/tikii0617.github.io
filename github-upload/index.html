@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        
+        <!-- =====PARTICLES.JS===== -->
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        
+        <!-- =====TYPED.JS===== -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <title>Portfolio website</title>
+    </head>
+    <body>
+        <!-- =====SCROLL PROGRESS BAR===== -->
+        <div class="scroll-progress">
+            <div class="scroll-progress-bar"></div>
+        </div>
+
+        <!-- =====PARTICLES BACKGROUND===== -->
+        <div id="particles-js"></div>
+
+        <!-- =====CUSTOM CURSOR===== -->
+        <div class="cursor"></div>
+        <div class="cursor-follower"></div>
+
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#home" class="nav__logo">Dekyi</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#learning" class="nav__link">Learning</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- =====THEME TOGGLE===== -->
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class='bx bx-moon'></i>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">dekyi</span><br><span id="typed-text"></span></h1>
+                    
+                    <p class="home__description">
+                        I design systems that simplify life, create tools that serve real people, and explore the space where technology meets culture.
+                    </p>
+                    
+                    <p class="home__subtitle">
+                        This site is my digital garden — a place to collect the things I'm building, thinking about, and slowly learning.
+                    </p>
+
+                    <a href="#contact" class="button">Get in touch</a>
+                </div>
+
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/in/dekyide/" class="home__social-icon"><i class='bx bxl-linkedin'></i>LinkedIn</a>
+                    
+                    <a href="https://github.com/Tikii0617" class="home__social-icon"><i class='bx bxl-github' ></i>GitHub</a>
+
+                    <a href="mailto:tikii0617@gmail.com" class="home__social-icon">
+                        <i class='bx bx-envelope'></i>
+                        Email
+                    </a>
+
+                    <a href="https://public.tableau.com/app/profile/dekyi.de/vizzes" class="home__social-icon">
+                        <i class='bx bx-bar-chart-alt-2'></i>
+                        Tableau
+                    </a>
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section" id="about">
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img">
+                        <img src="assets/img/about.jpeg" alt="About Me">
+                    </div>
+                    
+                    <div class="about__content">
+                        <h2 class="about__subtitle">Hi again — I'm dekyi.</h2>
+                        <p class="about__text">
+                            You could describe me as someone who's drawn to the "in-between" spaces: between people and systems, cultures and languages, technology and meaning.
+                        </p>
+                        
+                        <p class="about__text">
+                            I started out studying communication, culture, and language. Over time, I taught myself to code — not to chase a job title, but to solve very real, practical problems around me: data messes, clunky admin work, inaccessible workflows.
+                        </p>
+                        
+                        <p class="about__text">
+                            But I don't see tech as just efficiency. I care about rhythm, clarity, memory, and dignity — especially when we design things for people who are often left out.
+                        </p>
+                        
+                        <p class="about__text">
+                            I'm also multilingual (Chinese, Tibetan, English), and I spend a lot of time thinking about what gets lost — or revealed — in translation. Lately, I've been exploring how to use AI not just as a tool, but as a conversation partner in learning, cultural preservation, and storytelling.
+                        </p>
+                        
+                        <p class="about__highlight">
+                            If you're into systems that <em>feel human</em>, welcome. I think we'd get along.
+                        </p>
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== LEARNING NOTES =====-->
+            <section class="learning section" id="learning">
+                <h2 class="section-title">Learning & Insights</h2>
+                <p class="learning__description">Documenting my interdisciplinary journey and technical practice experiences</p>
+                
+                <div class="learning__container bd-grid">
+                    <div class="learning__gallery">
+                        <!-- Card 1: Data Is Always Someone's Story -->
+                        <div class="learning__card">
+                            <div class="learning__card-header" onclick="toggleCard(1)">
+                                <div class="learning__card-icon">💡</div>
+                                <h3 class="learning__card-title">Data Is Always Someone's Story</h3>
+                                <div class="learning__card-toggle">
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="learning__card-content" id="card-1">
+                                <p class="learning__card-text">
+                                    Building dashboards for teachers in Paris taught me that numbers aren't neutral. A student's engagement score represents late nights studying, family pressure, or genuine curiosity. When I clean messy data, I'm not just fixing inconsistencies—I'm making someone's reality more visible.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2: Building vs. Understanding -->
+                        <div class="learning__card">
+                            <div class="learning__card-header" onclick="toggleCard(2)">
+                                <div class="learning__card-icon">🔍</div>
+                                <h3 class="learning__card-title">Building vs. Understanding</h3>
+                                <div class="learning__card-toggle">
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="learning__card-content" id="card-2">
+                                <p class="learning__card-text">
+                                    I used to think success meant automating everything. Now I realize some friction is useful. When educators manually checked student records, they caught patterns algorithms missed—the quiet kid who stopped participating, the high achiever burning out. Sometimes the inefficient way teaches you what efficiency erases.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Cultural Code-Switching -->
+                        <div class="learning__card">
+                            <div class="learning__card-header" onclick="toggleCard(3)">
+                                <div class="learning__card-icon">🌍</div>
+                                <h3 class="learning__card-title">Cultural Code-Switching</h3>
+                                <div class="learning__card-toggle">
+                                    <i class="bx bx-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="learning__card-content" id="card-3">
+                                <p class="learning__card-text">
+                                    Working across Shanghai, Cardiff, and Paris revealed that problem-solving has accents. British teams wanted documentation before acting. Chinese colleagues preferred iterative testing. French stakeholders valued elegant solutions over quick fixes. I learned to adapt not just languages, but collaboration styles.
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+
+            <!--===== PROJECTS =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Projects</h2>
+                <p class="work__description">Documenting my interdisciplinary journey and technical practice experiences</p>
+
+                <!-- Project Categories Filter -->
+                <div class="project__filters">
+                    <button class="project__filter-btn active" data-filter="all">
+                        <i class="bx bx-grid-alt"></i>
+                        All
+                    </button>
+                    <button class="project__filter-btn" data-filter="research">
+                        <i class="bx bx-search-alt"></i>
+                        Research
+                    </button>
+                    <button class="project__filter-btn" data-filter="web">
+                        <i class="bx bx-code-alt"></i>
+                        Web Development
+                    </button>
+                    <button class="project__filter-btn" data-filter="ai">
+                        <i class="bx bx-brain"></i>
+                        AI & Data
+                    </button>
+                    <button class="project__filter-btn" data-filter="design">
+                        <i class="bx bx-palette"></i>
+                        UX/Design
+                    </button>
+                    <button class="project__filter-btn" data-filter="other">
+                        <i class="bx bx-bulb"></i>
+                        Others
+                    </button>
+                </div>
+
+                <div class="projects__container bd-grid">
+                    <div class="projects__grid">
+                        <!-- All Projects with Unified Card Format -->
+                        <div class="project__card" data-category="research">
+                            <a href="https://projects.learningplanetinstitute.org/projects/sustainculture/description">
+                               <img src="assets/img/sustainculture.png" alt="SustainCulture Project">
+                           </a>
+                           <div class="project__content">
+                               <span class="project__year">2025</span>
+                               <h4 class="project__title">SustainCulture Project</h4>
+                               <p class="project__desc">Cultural sustainability research and community engagement initiative</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">Cultural Research</span>
+                                   <span class="project__tag">Sustainability</span>
+                                   <span class="project__tag">Community</span>
+                                   <span class="project__tag">Research</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="other">
+                            <a href="https://github.com/Tikii0617/Tiki-and-Apso">
+                               <img src="assets/img/unity-game.png" alt="Tiki and Apso Unity Game">
+                           </a>
+                           <div class="project__content">
+                               <span class="project__year">2024</span>
+                               <h4 class="project__title">Tiki and Apso Forest Adventure</h4>
+                               <p class="project__desc">Unity 3D adventure game featuring interactive exploration and animation</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">Unity 3D</span>
+                                   <span class="project__tag">C#</span>
+                                   <span class="project__tag">Game Development</span>
+                                   <span class="project__tag">Animation</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="ai" data-project="workflow-automation">
+                            <div onclick="showProjectDetails('workflow-automation')">
+                               <img src="assets/img/Workflow Automation Migration.jpg" alt="Workflow Automation Migration">
+                           </div>
+                           <div class="project__content">
+                               <span class="project__year">2025</span>
+                               <h4 class="project__title">Workflow Automation Migration</h4>
+                               <p class="project__desc">n8n to Google Cloud Run migration with Docker containerization</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">Google Cloud</span>
+                                   <span class="project__tag">Docker</span>
+                                   <span class="project__tag">Automation</span>
+                                   <span class="project__tag">System Design</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="ai" data-project="ai-dictionary">
+                            <div onclick="showProjectDetails('ai-dictionary')">
+                               <div class="project__image-placeholder">
+                                   <div class="project__icon-large">📚</div>
+                                   <div class="project__placeholder-text">AI Dictionary</div>
+                               </div>
+                           </div>
+                           <div class="project__content">
+                               <span class="project__year">ongoing</span>
+                               <h4 class="project__title">AI-Powered Tibetan Dictionary</h4>
+                               <p class="project__desc">Cultural preservation through AI-generated definitions and examples</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">AI</span>
+                                   <span class="project__tag">Language Preservation</span>
+                                   <span class="project__tag">Prompt Engineering</span>
+                                   <span class="project__tag">Cultural Heritage</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="design" data-project="patina-hackathon">
+                            <div onclick="showProjectDetails('patina-hackathon')">
+                               <img src="assets/img/Patina People Hackathon .jpg" alt="Patina People Hackathon">
+                           </div>
+                           <div class="project__content">
+                               <span class="project__year">2025</span>
+                               <h4 class="project__title">Patina People Hackathon</h4>
+                               <p class="project__desc">Designing communication tools for older adults with accessibility focus</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">UX Design</span>
+                                   <span class="project__tag">Accessibility</span>
+                                   <span class="project__tag">User Research</span>
+                                   <span class="project__tag">Inclusive Design</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="research" data-project="podcast-experiments">
+                            <div onclick="showProjectDetails('podcast-experiments')">
+                               <div class="project__image-placeholder">
+                                   <div class="project__icon-large">🎧</div>
+                                   <div class="project__placeholder-text">Podcast Research</div>
+                               </div>
+                           </div>
+                           <div class="project__content">
+                               <span class="project__year">2024-ongoing</span>
+                               <h4 class="project__title">Podcast Experiments</h4>
+                               <p class="project__desc">Exploring social dynamics and gender studies through media production</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">Media Production</span>
+                                   <span class="project__tag">Social Dynamics</span>
+                                   <span class="project__tag">Gender Studies</span>
+                                   <span class="project__tag">Communication</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="ai">
+                            <a href="https://github.com/Tikii0617/Bitcoin-Price-Analysis">
+                               <img src="assets/img/bi.png" alt="Bitcoin Price Analysis">
+                           </a>
+                           <div class="project__content">
+                               <span class="project__year">2023</span>
+                               <h4 class="project__title">Bitcoin Price Analysis</h4>
+                               <p class="project__desc">Time series analysis and price prediction using Python</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">Python</span>
+                                   <span class="project__tag">Data Analysis</span>
+                                   <span class="project__tag">Time Series</span>
+                                   <span class="project__tag">Machine Learning</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="ai">
+                            <a href="https://github.com/Tikii0617/WebPage-View-Time-Series-Visualizer">
+                               <img src="assets/img/web-view.png" alt="Page Views Analysis">
+                           </a>
+                           <div class="project__content">
+                               <span class="project__year">2023</span>
+                               <h4 class="project__title">Page Views Time Series Analysis</h4>
+                               <p class="project__desc">Data visualization and pattern analysis for web metrics</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">Data Visualization</span>
+                                   <span class="project__tag">Web Analytics</span>
+                                   <span class="project__tag">Python</span>
+                                   <span class="project__tag">Matplotlib</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="ai">
+                            <a href="https://github.com/Tikii0617/Medical-Data-Visualizer">
+                               <img src="assets/img/med.png" alt="Medical Data Analysis">
+                           </a>
+                           <div class="project__content">
+                               <span class="project__year">2023</span>
+                               <h4 class="project__title">Medical Data Visualizer</h4>
+                               <p class="project__desc">Healthcare data analysis and statistical visualization</p>
+                               <div class="project__tags">
+                                   <span class="project__tag">Healthcare</span>
+                                   <span class="project__tag">Statistical Analysis</span>
+                                   <span class="project__tag">Data Science</span>
+                                   <span class="project__tag">Seaborn</span>
+                               </div>
+                           </div>
+                        </div>
+
+                        <div class="project__card" data-category="web">
+                            <a href="survery/survey.html">
+                             <img src="assets/img/work-survey.png" alt="Survey Form">
+                            </a>
+                            <div class="project__content">
+                                <span class="project__year">2022</span>
+                                <h4 class="project__title">Survey Form</h4>
+                                <p class="project__desc">Responsive form design with validation</p>
+                                <div class="project__tags">
+                                    <span class="project__tag">HTML</span>
+                                    <span class="project__tag">CSS</span>
+                                    <span class="project__tag">JavaScript</span>
+                                    <span class="project__tag">Form Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project__card" data-category="web">
+                         <a href="tribute/tribut.html">
+                                <img src="assets/img/work-tribute.jpg" alt="Tribute Page">
+                         </a>
+                         <div class="project__content">
+                             <span class="project__year">2022</span>
+                             <h4 class="project__title">Tribute Page</h4>
+                             <p class="project__desc">Responsive biographical webpage design</p>
+                             <div class="project__tags">
+                                 <span class="project__tag">HTML</span>
+                                 <span class="project__tag">CSS</span>
+                                 <span class="project__tag">Responsive Design</span>
+                                 <span class="project__tag">Web Development</span>
+                             </div>
+                         </div>
+                        </div>
+
+                        <div class="project__card" data-category="web">
+                          <a href="technical document/index.html">
+                             <img src="assets/img/work-technical.png" alt="Technical Documentation">
+                         </a>
+                         <div class="project__content">
+                             <span class="project__year">2022</span>
+                             <h4 class="project__title">Bouldering Technical Documentation</h4>
+                             <p class="project__desc">Structured technical documentation with navigation</p>
+                             <div class="project__tags">
+                                 <span class="project__tag">Documentation</span>
+                                 <span class="project__tag">Technical Writing</span>
+                                 <span class="project__tag">HTML</span>
+                                 <span class="project__tag">CSS</span>
+                             </div>
+                         </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--===== CONTACT =====-->
+            <section class="contact section" id="contact">
+                <h2 class="section-title">Contact</h2>
+
+                <div class="contact__container bd-grid">
+                    <div class="contact__content">
+                        <div class="contact__info">
+                            <p class="contact__description">
+                                I'm open to collaborations, conversations, or just curious questions.<br>
+                                If something you saw here resonates, I'd love to hear from you.
+                            </p>
+                            
+                            <p class="contact__note">
+                                No need for perfect timing — just a real intention is enough.
+                            </p>
+
+                            <div class="contact__links">
+                                <a href="mailto:tikii0617@gmail.com" class="contact__link">
+                                    <i class='bx bx-envelope'></i>
+                                    <span>tikii0617@gmail.com</span>
+                                </a>
+                                <a href="https://public.tableau.com/app/profile/dekyi.de/vizzes" class="contact__link">
+                                    <i class='bx bx-bar-chart-alt-2'></i>
+                                    <span>Tableau: @dekyi.de</span>
+                                </a>
+                                <a href="https://github.com/tikii0617" class="contact__link">
+                                    <i class='bx bxl-github'></i>
+                                    <span>@tikii0617</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <form id="my-form" action="https://formspree.io/f/xqkvrrrz" method="POST" class="contact__form">
+                            <input type="text" name="name" placeholder="Your name" required class="contact__input">
+                            <input type="email" name="email" placeholder="Your email" required class="contact__input">
+                            <textarea name="message" placeholder="What's on your mind?" required class="contact__input contact__textarea"></textarea>
+                            <input type="submit" value="Send message" class="contact__button button">
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <div class="footer__content">
+                <div class="footer__info">
+                    <p class="footer__title">Dekyi</p>
+                    <p class="footer__description">
+                        Building bridges between cultures, technologies, and meaningful human experiences.
+                    </p>
+                </div>
+                
+                <div class="footer__links">
+                    <div class="footer__links-group">
+                        <h4 class="footer__subtitle">Connect</h4>
+                        <div class="footer__social">
+                            <a href="https://www.linkedin.com/in/dekyide/" class="footer__social-link">
+                                <i class='bx bxl-linkedin'></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/tikii0617" class="footer__social-link">
+                                <i class='bx bxl-github'></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:tikii0617@gmail.com" class="footer__social-link">
+                                <i class='bx bx-envelope'></i>
+                                <span>Email</span>
+                            </a>
+                            <a href="https://public.tableau.com/app/profile/dekyi.de/vizzes" class="footer__social-link">
+                                <i class='bx bx-bar-chart-alt-2'></i>
+                                <span>Tableau</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer__links-group">
+                        <h4 class="footer__subtitle">Explore</h4>
+                        <ul class="footer__nav">
+                            <li><a href="#home" class="footer__nav-link">Home</a></li>
+                            <li><a href="#about" class="footer__nav-link">About</a></li>
+                            <li><a href="#learning" class="footer__nav-link">Insights</a></li>
+                            <li><a href="#work" class="footer__nav-link">Projects</a></li>
+                            <li><a href="#contact" class="footer__nav-link">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <p class="footer__copy">
+                    &#169; 2025 Dekyi. Made with care and curiosity.
+                </p>
+                <p class="footer__note">
+                    Designed for meaningful connections across cultures and technologies.
+                </p>
+            </div>
+        </footer>
+
+        <!-- Project Details Modal -->
+        <div class="project-modal" id="projectModal">
+            <div class="project-modal-content">
+                <div class="project-modal-header">
+                    <h2 id="modalTitle"></h2>
+                    <span class="project-modal-close" onclick="closeProjectModal()">&times;</span>
+                </div>
+                <div class="project-modal-body">
+                    <div class="project-modal-image">
+                        <img id="modalImage" src="" alt="">
+                    </div>
+                    <div class="project-modal-info">
+                        <div class="project-modal-meta">
+                            <span class="project-modal-year" id="modalYear"></span>
+                            <div class="project-modal-tags" id="modalTags"></div>
+                        </div>
+                        <div class="project-modal-description" id="modalDescription"></div>
+                        <div class="project-modal-details" id="modalDetails"></div>
+                        <div class="project-modal-tech" id="modalTech"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intelligent Assistant -->
+        <div class="assistant-container">
+            <!-- Language Toggle -->
+            <div class="language-toggle">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="zh">中</button>
+                <button class="lang-btn" data-lang="bo">བོད་</button>
+            </div>
+
+            <!-- Assistant Chat Button -->
+            <div class="assistant-toggle" id="assistantToggle">
+                <i class="bx bx-message-dots"></i>
+                <span class="assistant-badge" id="assistantBadge">1</span>
+            </div>
+
+            <!-- Assistant Window -->
+            <div class="assistant-window" id="assistantWindow">
+                <div class="assistant-header">
+                    <div class="assistant-avatar">
+                        <i class="bx bx-bot"></i>
+                    </div>
+                    <div class="assistant-info">
+                        <h4 data-translate="assistant.name">Dekyi Assistant</h4>
+                        <span class="assistant-status" data-translate="assistant.status">Online - Ready to help</span>
+                    </div>
+                    <button class="assistant-close" id="assistantClose">
+                        <i class="bx bx-x"></i>
+                    </button>
+                </div>
+
+                <div class="assistant-body" id="assistantBody">
+                    <div class="assistant-welcome">
+                        <p data-translate="assistant.welcome">👋 Hello! I'm here to help you explore Dekyi's work and discuss potential collaborations.</p>
+                    </div>
+
+                    <!-- Quick Actions -->
+                    <div class="quick-actions">
+                        <h5 data-translate="assistant.quickActions">Quick Actions:</h5>
+                        <button class="quick-btn" data-action="projects" data-translate="assistant.exploreProjects">
+                            <i class="bx bx-folder"></i> Explore Projects
+                        </button>
+                        <button class="quick-btn" data-action="collaborate" data-translate="assistant.collaborate">
+                            <i class="bx bx-group"></i> Collaboration Inquiry
+                        </button>
+                        <button class="quick-btn" data-action="background" data-translate="assistant.background">
+                            <i class="bx bx-user"></i> About Background
+                        </button>
+                    </div>
+
+                    <!-- FAQ Section -->
+                    <div class="faq-section" id="faqSection" style="display: none;">
+                        <h5 data-translate="assistant.faqTitle">Frequently Asked Questions:</h5>
+                        <div class="faq-item">
+                            <button class="faq-question" data-translate="assistant.faq1.q">What's your research focus?</button>
+                            <div class="faq-answer" data-translate="assistant.faq1.a">I focus on interdisciplinary research combining AI, cultural preservation, and human-centered design. My work bridges technology and cultural understanding.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-translate="assistant.faq2.q">How do you approach collaborations?</button>
+                            <div class="faq-answer" data-translate="assistant.faq2.a">I value authentic partnerships that respect cultural contexts and create meaningful impact. I'm open to research collaborations, design projects, and cultural bridge-building initiatives.</div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" data-translate="assistant.faq3.q">What makes your approach unique?</button>
+                            <div class="faq-answer" data-translate="assistant.faq3.a">My trilingual background (Chinese, Tibetan, English) and interdisciplinary experience allow me to approach problems from multiple cultural and technical perspectives.</div>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration Form -->
+                    <div class="collaboration-form" id="collaborationForm" style="display: none;">
+                        <h5 data-translate="assistant.collabTitle">Tell me about your collaboration idea:</h5>
+                        <form id="collabForm">
+                            <select name="projectType" class="collab-input" required>
+                                <option value="" data-translate="assistant.selectType">Select collaboration type...</option>
+                                <option value="research" data-translate="assistant.research">Research Partnership</option>
+                                <option value="design" data-translate="assistant.design">UX/Design Project</option>
+                                <option value="cultural" data-translate="assistant.cultural">Cultural Bridge Building</option>
+                                <option value="ai" data-translate="assistant.ai">AI/Data Science</option>
+                                <option value="other" data-translate="assistant.other">Other</option>
+                            </select>
+                            <textarea name="description" class="collab-input" placeholder="Describe your project idea..." data-translate-placeholder="assistant.describePlaceholder" rows="3" required></textarea>
+                            <input type="text" name="timeline" class="collab-input" placeholder="Preferred timeline" data-translate-placeholder="assistant.timelinePlaceholder">
+                            <input type="email" name="email" class="collab-input" placeholder="Your email" data-translate-placeholder="assistant.emailPlaceholder" required>
+                            <button type="submit" class="collab-submit" data-translate="assistant.submit">Send Collaboration Request</button>
+                        </form>
+                    </div>
+
+                    <!-- Chat Messages Area -->
+                    <div class="chat-messages" id="chatMessages"></div>
+                </div>
+
+                <div class="assistant-footer">
+                    <input type="text" class="message-input" id="messageInput" placeholder="Type your message..." data-translate-placeholder="assistant.typePlaceholder">
+                    <button class="send-btn" id="sendBtn">
+                        <i class="bx bx-send"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
