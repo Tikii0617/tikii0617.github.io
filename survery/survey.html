@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+	  const form = document.getElementById("survey-form");
+	  form.addEventListener("submit", function(event) {
+		event.preventDefault(); // 
+	
+		// 获取表单字段的值
+		const name = document.getElementById("name-label").value;
+		const email = document.getElementById("email-label").value;
+		const gender = document.querySelector('input[name="Gender"]:checked');
+		const comments = document.getElementById("area").value;
+	
+		// 进行表单字段验证
+		if (!name || !email || !gender) {
+		  alert("PLease enter");
+		} else {
+		  // 表单数据有效，显示感谢消息
+		  const container = document.querySelector(".container");
+		  container.innerHTML = "<h1>Thank you!</h1>";
+		}
+	  });
+	});
+	</script>
+	
+<body>
+	<div id="title-container">
+		<h1 id="title">Survey Form</h1>
+	  </div>
+	  
+	
+		<p id="description">Thank you for helping us</p>
+			<form id="survey-form">
+				<div class="form-container">
+					<p>Name</p>
+					<input type="text" name="" placeholder="Enter Your Name" id="name-label" class="filled">
+
+					<p>Email</p>
+					<input type="email" name="" placeholder="Enter Your Email" id="email-label" class="filled">
+
+					<p>Number </p>
+					<input type="number" name="" placeholder="Enter Your Number" id="number-label" class="filled">
+
+					
+
+					<p>Where do you live?</p>
+					<input type="radio" name="Where" value="Northern">
+					<label for="Northern" class="change-col"> Northern Ireland</label><br>
+					<input type="radio" name="gneder" value="Scotland">
+					<label for="Scotland" class="change-col">Scotland</label><br>
+					<input type="radio" name="Where" value="Wales">
+					<label for="Wales" class="change-col">Wales</label><br>
+					<input type="radio" name="Where" value="England">
+					<label for="England" class="change-col">England</label><br>
+					
+
+					<p>What would you like to see improved? (Check all that apply)</p>
+					<input type="checkbox" name="" value="checked">
+					<label for="" class="change-col">Front-end</label><br>
+					<input type="checkbox" name="" value="checked">
+					<label for="" class="change-col">Back-end</label><br>
+					<input type="checkbox" name="" value="checked">
+					<label for="" class="change-col">Data Visualization</label><br>
+				
+					<input type="checkbox" name="" value="checked">
+					<label for="" class="change-col">Additional Courses</label><br>
+					<br>
+					<p>Anything else you wan to say:</p>
+					<!-- <input type="textarea " name="comment" placeholder="Make Your Comments" id="area"> -->
+					<textarea placeholder="Make Your Comments" id="area"></textarea>
+					<button id="submit" type="submit"><strong>Submint</strong></button>
+
+				</div>
+			</form>
+		
+	</div>
+</body>
+</html>
