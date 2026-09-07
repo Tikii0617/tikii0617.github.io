@@ -266,6 +266,17 @@ mark {
   font-size: .6rem;
 }
 
+.context__chip--link {
+  color: var(--text-light);
+  border-bottom: 1px solid transparent;
+  transition: color .2s ease, border-color .2s ease;
+}
+
+.context__chip--link:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
 /*=============== MARQUEE ===============*/
 .marquee {
   background: var(--ink);
@@ -426,8 +437,7 @@ mark {
 .detail__summary:hover { color: var(--accent); }
 
 .detail__item[open] .detail__summary::before {
-  content: '\2013';
-  transform: rotate(180deg);
+  transform: rotate(45deg);
 }
 
 .detail__body {
