@@ -381,6 +381,74 @@ mark {
   margin-right: .45rem;
 }
 
+/* expandable detail list */
+.detail {
+  margin-top: 1.6rem;
+  border-top: 1px solid var(--hairline);
+}
+
+.detail__item {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.detail__summary {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+  padding: .85rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-size: .72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--text);
+  transition: color .2s ease;
+}
+
+.detail__summary::-webkit-details-marker { display: none; }
+
+.detail__summary::before {
+  content: '+';
+  flex: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  display: grid;
+  place-items: center;
+  font-size: .9rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--neon);
+  border-radius: 1px;
+  transition: transform .25s ease;
+}
+
+.detail__summary:hover { color: var(--accent); }
+
+.detail__item[open] .detail__summary::before {
+  content: '\2013';
+  transform: rotate(180deg);
+}
+
+.detail__body {
+  padding: 0 0 1.1rem 1.9rem;
+  max-width: 54ch;
+  font-size: .85rem;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .detail__item[open] .detail__body {
+    animation: detail-open .3s ease;
+  }
+}
+
+@keyframes detail-open {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: none; }
+}
+
 /* stat cluster: dark panel so the neon can carry the numbers */
 .statgrid {
   display: grid;
